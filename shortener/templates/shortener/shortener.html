@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+    <p class="message">Enter URL address to shorten</p>
+    <form action="{% url 'shortener:shortener' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <input type="submit" value="Create short URL" class="btn btn-primary btn-lg btn-block">
+    </form>
+{% endblock %}
