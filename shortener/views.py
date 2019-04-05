@@ -1,5 +1,3 @@
-import pyperclip
-
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
@@ -33,7 +31,6 @@ class ShortenUrlView(View):
                 url_code=url_code,
                 full_url=full_url
             )
-            pyperclip.copy(f'https://shorty.herokuapp.com/{url_code}')  # copies shortened url to clipboard
             return HttpResponseRedirect(
                 reverse('shortener:success', kwargs={'url_code': url_code})
             )
