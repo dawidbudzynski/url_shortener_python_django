@@ -1,10 +1,14 @@
 body {
     font-family: 'Montserrat', serif;
-    background-color: ghostwhite;
+    background-color: #F8F8FF;
+}
+
+#header {
+    width: 100%;
+    text-align: center;
 }
 
 #header_image {
-    width: 100%;
     margin: 0 auto 30px auto;
 }
 
@@ -20,11 +24,11 @@ body {
 }
 
 .btn-primary {
-    background-color: #253679;
+    background-color: #03359c;
     border: #324191 solid 1px;
 }
 
 .btn-primary:hover {
-    background-color: #394d79;
+    background-color: #283dd0;
     border: #324191 solid 1px;
 }

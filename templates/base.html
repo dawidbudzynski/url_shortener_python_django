@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Shortyyy</title>
-    <link rel="icon" type="image/png" href="{% static 'img/logo.png' %}"/>
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 
     <!-- Bootstrap CSS -->
@@ -19,12 +19,10 @@
     <link rel="stylesheet" href="{% static 'css/master.css' %}">
 </head>
 <body>
-<div id="wrapperHeader">
-    <div id="header">
-        <img id="header_image" src="{% static 'img/header.jpg' %} " alt="logo"/>
-    </div>
-</div>
 <div class="container mycontent">
+    <div id="header">
+        <img id="header_image" src="{% static 'img/logo.png' %} " alt="logo"/>
+    </div>
     {% block content %}
     {% endblock %}
 </div>
