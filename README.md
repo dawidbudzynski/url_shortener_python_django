@@ -17,23 +17,20 @@ Application gets url from user, shortens it and saves to database: full url, sho
 ## Setup
 To run this project:
 1. Rename settings.ini.example to settings.ini and fill required fields. 
-
 2. Install required libraries using pip:
-
 ```
 $ pip install -r requirements.txt
 ```
-3. On Linux you need to install copy/paste mechanisms:
-
+3. Create PostgreSQL database and configure it in setting.py
+4. Make database migrations:
 ```
-$ sudo apt-get install xsel
+$ python manage.py makemigrations
+$ python manage.py migrate
 ```
-4. Create PostgreSQL database and configure it in settings.py
-
 5. To run your local server use command: 
 ```
 $ python manage.py runserver
 ```
 
 ## Demo
-## https://shortyyy.herokuapp.com
+## https://shortyyy.herokuapp.com/
