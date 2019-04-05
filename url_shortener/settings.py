@@ -1,5 +1,6 @@
 import os
 
+import django_heroku
 from decouple import config
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -58,8 +59,12 @@ WSGI_APPLICATION = 'url_shortener.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME', cast=str),
+        'USER': config('DB_USER', cast=str),
+        'PASSWORD': config('DB_PASSWORD', cast=str),
+        'HOST': config('DB_HOST', cast=str),
+        'PORT': config('DB_PORT', cast=str),
     }
 }
 
@@ -92,3 +97,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
 STATIC_URL = '/static/'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())

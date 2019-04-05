@@ -1,0 +1,8 @@
+[settings]
+SECRET_KEY = <YOUR DJANGO SECRET KEY>
+DEBUG = True
+DB_NAME = <database name>
+DB_USER = <database user>
+DB_PASSWORD = <database password>
+DB_HOST = <database host>
+DB_PORT = <database port>
