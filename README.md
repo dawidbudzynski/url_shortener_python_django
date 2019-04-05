@@ -23,8 +23,14 @@ To run this project:
 ```
 $ pip install -r requirements.txt
 ```
+3. On Linux you need to install copy/paste mechanisms:
 
-3. To run your local server use command: 
+```
+$ sudo apt-get install xsel
+```
+4. Create PostgreSQL database and configure it in settings.py
+
+5. To run your local server use command: 
 ```
 $ python manage.py runserver
 ```
