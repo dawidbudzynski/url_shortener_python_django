@@ -1,8 +1,8 @@
 # url_shortener_python_django
 
 ## General info
-A web application made using Python 3, Django 2 and Bootstrap.
-Application gets url from user, shortens it and saves to database: full url, short url and creation date.
+A web application made using Python 3, Django 2 and Bootstrap.  
+<br/>Application gets url from user, shortens it and saves to database: full url, short url and creation date.
 
 ## Main functions
 * shortens provided URL
