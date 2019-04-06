@@ -5,7 +5,7 @@ from django.views import View
 from django.views.generic.base import TemplateView
 
 from shortener.forms import UrlForm
-from shortener.models import Urls
+from shortener.models import Url
 from .utils import generate_short_code
 
 
@@ -27,7 +27,7 @@ class ShortenUrlView(View):
         if form.is_valid():
             full_url = form.cleaned_data.get('full_url')
             url_code = generate_short_code()
-            Urls.objects.create(
+            Url.objects.create(
                 url_code=url_code,
                 full_url=full_url
             )
@@ -41,7 +41,7 @@ class RedirectToOriginalPageView(View):
     """Reads url_code from user and redirects to original page"""
 
     def get(self, request, url_code):
-        url = Urls.objects.filter(url_code=url_code)
+        url = Url.objects.filter(url_code=url_code)
         if url:
             return HttpResponseRedirect(url[0].full_url)
         return HttpResponseRedirect(reverse('shortener:page_not_found'))
