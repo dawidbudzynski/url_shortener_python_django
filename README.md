@@ -34,3 +34,7 @@ $ python manage.py runserver
 
 ## Demo
 ## https://shortyyy.herokuapp.com/
+
+![alt text](https://raw.githubusercontent.com/dawidbudzynski/url_shortener_python_django/master/demo/demo_1.png)
+
+![alt text](https://raw.githubusercontent.com/dawidbudzynski/url_shortener_python_django/master/demo/demo_2.png)
